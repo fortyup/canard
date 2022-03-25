@@ -1,11 +1,15 @@
 package canard.model;
 
+import canard.model.vol.ComportementVol;
+
 public abstract class Canard {
 	protected String name;
+	protected ComportementVol comportementVol;
 
-	Canard(String name) {
+	Canard(String name, ComportementVol comportementVol) {
 		super();
 		this.name = name;
+		this.comportementVol = comportementVol;
 	}
 
 	public String getName() {
@@ -21,4 +25,8 @@ public abstract class Canard {
 	}
 	
 	public abstract String afficher();
+	
+	public String effectuerVol() {
+		return comportementVol.voler();
+	}
 }

@@ -1,9 +1,11 @@
 package canard.model;
 
+import canard.model.vol.VolerAvecDesAiles;
+
 public class Mandarin extends Canard {
 
 	public Mandarin(String name) {
-		super(name);
+		super(name, new VolerAvecDesAiles());
 	}
 
 	@Override
